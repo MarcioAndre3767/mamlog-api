@@ -16,5 +16,8 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 	//Nome não exato
 	List<Cliente> findByNomeContaining(String nome);
 	
+	//Busca por email
+	java.util.Optional<Cliente> findByEmail(String email);
+	
 
 }
