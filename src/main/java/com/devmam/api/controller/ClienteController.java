@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devmam.domain.model.Cliente;
-import com.devmam.domain.model.repository.ClienteRepository;
+import com.devmam.domain.repository.ClienteRepository;
 import com.devmam.domain.service.CatalogoClienteService;
 
 import lombok.AllArgsConstructor;

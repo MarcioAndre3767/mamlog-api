@@ -1,4 +1,4 @@
-package com.devmam.domain.model.repository;
+package com.devmam.domain.repository;
 
 import java.util.List;
 

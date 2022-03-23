@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devmam.domain.exception.NegocioException;
 import com.devmam.domain.model.Cliente;
-import com.devmam.domain.model.repository.ClienteRepository;
+import com.devmam.domain.repository.ClienteRepository;
 
 import lombok.AllArgsConstructor;
 
@@ -14,6 +14,11 @@ import lombok.AllArgsConstructor;
 public class CatalogoClienteService {
 	
 	private ClienteRepository clienteRepository;
+	
+	public Cliente buscar(Long clienteId) {
+		return clienteRepository.findById(clienteId)
+				.orElseThrow(() -> new NegocioException("Cliente não foi encontrado!!!"));
+	}
 	
 	@Transactional
 	public Cliente salvar(Cliente cliente) {
